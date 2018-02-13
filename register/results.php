@@ -10,7 +10,13 @@
 </head>
 <body>
 
+<?php
 
+print_r($_POST['name']);
+print_r($_POST['lastname']);
+
+
+?>
 
 
 
