@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +27,7 @@ echo "<input type='submit' value='Submit'>";
 echo     "</form>";
 
 
-
+echo ($_SESSION['name']);
 
 ?>
 
