@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +28,7 @@ echo     "</form>";
 
 // if(isset($))
 
-
+echo ($_SESSION['name']);
 
 ?>
 
