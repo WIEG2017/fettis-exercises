@@ -23,6 +23,7 @@ echo "<input type='submit' value='Submit'>";
 
 echo     "</form>";
 
+// if(isset($))
 
 
 
