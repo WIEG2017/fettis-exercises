@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>What is my IP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <style>
@@ -25,6 +25,7 @@
             text-align:center;
             background-color: grey;
             padding-top:50px;
+            border-radius:50%;
         }
         h2{
             color:white;
@@ -35,7 +36,7 @@
         }
     </style>
     <header>
-    <h1>Detta är din IP address 😁</h1>
+    <h1>This is your IP adress 😁</h1>
 </header>
 <body>
     <?php 
