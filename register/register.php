@@ -1,5 +1,8 @@
 <?php 
 session_start();
+if(isset($_SESSION['name'])){
+    header("location:results.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,9 +29,9 @@ echo "<input type='submit' value='Submit'>";
 
 echo     "</form>";
 
-// if(isset($))
 
-echo ($_SESSION['name']);
+
+// print_r ($_SESSION['name']);
 
 ?>
 

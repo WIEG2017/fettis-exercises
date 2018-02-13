@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +26,6 @@
 <body>
 
 <?php
-session_start();
 
 if(isset($_POST['name']) or isset($_POST['lastname'])){
   $_SESSION['name'] = $_POST['name'];
@@ -36,7 +38,7 @@ echo "<h1>Welcome ".$name  . '  ' . $lastname.", Enjoy your stay!</h1>";
 echo "<br/>";
 echo '<a href="register.php">back</a>';
 
-
+echo '<br/><a href="sessiondestroy.php"><button>DÖDA</button></a>'
 
 ?>
 
