@@ -19,7 +19,8 @@ if(isset($_POST['name']) or isset($_POST['lastname'])){
   $_SESSION['name'] = $_POST['name'];
   $_SESSION['lastname'] = $_POST['lastname'];
 }
-
+echo "<br/>";
+echo '<a href="register.php">back</a>';
 
 ?>
 
