@@ -12,16 +12,6 @@
 
 <?php
 
-<<<<<<< HEAD
-$name = $_POST['name'];
-$lastname = $_POST['lastname'];
-
-foreach( $name as $key ) {
-    print "Customers name is ".$name." and lastname: ".$lastname[$key].", thank you!";
-}
-=======
-
->>>>>>> c0bf8fab16c55554763aea393b2fb50071ccd776
 
 if(isset($_POST['name']) or isset($_POST['lastname'])){
   $_SESSION['name'] = $_POST['name'];
