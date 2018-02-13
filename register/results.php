@@ -12,13 +12,16 @@
 
 <?php
 
-print_r($_POST['name']);
-print_r($_POST['lastname']);
+
 
 if(isset($_POST['name']) or isset($_POST['lastname'])){
   $_SESSION['name'] = $_POST['name'];
   $_SESSION['lastname'] = $_POST['lastname'];
 }
+$name = $_SESSION['name'];
+$lastname = $_SESSION['lastname'];
+
+echo "<h1>hej ".$name . $lastname."</h1>";
 echo "<br/>";
 echo '<a href="register.php">back</a>';
 
