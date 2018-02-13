@@ -27,6 +27,14 @@
             )
         )
     );
+    
+    function showFolders($input) {
+        $html = '';
+        foreach($input as $key => $value) {
+            $html .= is_array($value) ? "<li>$key<ul>".showFolders($value)."</ul></li>" : "<li>$value</li>";
+        }
+        return $html;
+    }
 ?>
 <!doctype html>
 <html lang="sv"><head>
@@ -34,17 +42,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>Folder Structur</title>
 </head><body>
-    <ul>
-    <?php
-        function showFolders($input) {
-            $html = '';
-            foreach($input as $key => $value) {
-                $html .= is_array($value) ? "<li>$key<ul>".showDirectory($value)."</ul></li>" : "<li>$value</li>";
-            }
-            return $html;
-        }
-        echo showFolders($folders);
-    ?>
-    </ul>
+    <ul><?=showFolders($folders);?></ul>
 </body>
 </html>
