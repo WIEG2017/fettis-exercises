@@ -10,9 +10,8 @@
 </head>
 <body>
     <?php 
-        // echo $_SERVER['REMOTE_ADDR'];
-        echo $_SERVER['HTTP_CLIENT_IP'];
-        print_r ($_SERVER['HTTP_CLIENT_IP'])
+        echo $_SERVER['REMOTE_ADDR'];
+
         
     ?>
 
