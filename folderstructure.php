@@ -36,14 +36,14 @@
 </head><body>
     <ul>
     <?php
-        function showDirectory($input) {
+        function showFolders($input) {
             $html = '';
             foreach($input as $key => $value) {
                 $html .= is_array($value) ? "<li>$key<ul>".showDirectory($value)."</ul></li>" : "<li>$value</li>";
             }
             return $html;
         }
-        echo showDirectory($folders);
+        echo showFolders($folders);
     ?>
     </ul>
 </body>
