@@ -12,20 +12,23 @@
             top:0px;
             right:0px;
             left:0px;
-            height: 50px;
+            height: 90px;
             background-color:grey;
             text-align:center;
         }
         .wrapper{
-            width:150px;
+            width:350px;
             height:150px;
-            border:1px solid black;
+            color:white;
             margin:auto;
             margin-top:150px;
+            text-align:center;
+            background-color: grey;
+            padding-top:50px;
         }
     </style>
     <header>
-    hej
+    <h1>Detta är din IP address 😁</h1>
 </header>
 <body>
     <?php 
