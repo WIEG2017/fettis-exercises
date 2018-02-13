@@ -1,6 +1,6 @@
 <?php 
 
-echo "<form action='results.php' METHOD='POST'>";
+echo "<form action='.php' METHOD='POST'>";
 
 echo "<input type='number' name='name'>Name<br/>";
 
