@@ -15,6 +15,11 @@
 print_r($_POST['name']);
 print_r($_POST['lastname']);
 
+if(isset($_POST['name']) or isset($_POST['lastname'])){
+  $_SESSION['name'] = $_POST['name'];
+  $_SESSION['lastname'] = $_POST['lastname'];
+}
+
 
 ?>
 
