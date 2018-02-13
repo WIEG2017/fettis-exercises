@@ -12,7 +12,10 @@
                     'styles',
                     'scripts',
                     'images',
-                    'php'
+                    'php' => array(
+                        'aaaaa',
+                        'bbbbb'
+                    )
                 ),
                 'server' => array(
                     'get',
