@@ -15,16 +15,23 @@
             height: 90px;
             background-color:grey;
             text-align:center;
+            /* color:white; */
         }
         .wrapper{
             width:350px;
             height:150px;
-            color:white;
             margin:auto;
             margin-top:150px;
             text-align:center;
             background-color: grey;
             padding-top:50px;
+        }
+        h2{
+            color:white;
+            font-size:40px; 
+        }
+        h2:hover {
+            color: red;
         }
     </style>
     <header>
@@ -33,7 +40,7 @@
 <body>
     <?php 
         echo "<div class='wrapper'>
-        <h1>".$_SERVER['REMOTE_ADDR']."</h1>
+        <h2>".$_SERVER['REMOTE_ADDR']."</h2>
         </div>"
         ;
 
