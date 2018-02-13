@@ -1,8 +1,15 @@
 <?php 
 session_start();
-if(isset($_SESSION['name'])){
-    header("location:results.php");
-}
+
+if (!$_SESSION["urllastname"] === "/register/results.php"){
+    
+
+    if(empty($_SESSION["forgottfirstname"]) or empty($_SESSION["forgottlastname"])){
+        if(isset($_SESSION['name'])){
+            header("location:results.php");
+        }
+    }
+}   
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,6 +30,7 @@ if(isset($_SESSION['name'])){
             width:400px;
             height:150px;
             margin:auto;
+            margin-top:80px;
             padding-top:50px;
         }
         .nameandinput{
@@ -36,8 +44,14 @@ if(isset($_SESSION['name'])){
             margin-bottom:20px;
         }
         #submit{
-            margin-top:20px;
             width:150px;
+        }
+        #missinginfo{
+            margin:auto;
+            margin-top: 20px;
+            width:200px;
+            color:red;
+            font-size:17px;
         }
     </style>
 </head>
@@ -47,6 +61,7 @@ if(isset($_SESSION['name'])){
 </header>
 <body>
     <div id='wrapper'>
+
         <form action='results.php' METHOD='POST'>      
             <div class='nameandinput'>
                 <div class='name'>
@@ -66,6 +81,10 @@ if(isset($_SESSION['name'])){
             </div>
             <input id="submit" type="submit" value="PRESS ME">
         </form>
+        <div id="missinginfo">
+                <?php echo $_SESSION["forgottfirstname"]?>
+                <?php echo $_SESSION["forgottlastname"]?>
+        </div>
     </div>
 </body>
 </html>
