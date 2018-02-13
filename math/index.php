@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Issue #14 The Math one!!</title>
 <style>
 body{
     text-align: center;
@@ -17,6 +17,7 @@ body{
 
 </head>
 <body>
+<h1>Issue #14 The math one!</h1>
 <form method = "GET" action = "index.php">
   Ange tal 1:
   <input type="number" name="tal1" min="1" max="9999"><br>
