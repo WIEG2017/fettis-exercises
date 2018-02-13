@@ -12,8 +12,12 @@
 
 <?php
 
-print_r($_POST['name']);
-print_r($_POST['lastname']);
+$name = $_POST['name'];
+$lastname = $_POST['lastname'];
+
+foreach( $name as $key ) {
+    print "Customers name is ".$name." and lastname: ".$lastname[$key].", thank you!";
+}
 
 if(isset($_POST['name']) or isset($_POST['lastname'])){
   $_SESSION['name'] = $_POST['name'];
