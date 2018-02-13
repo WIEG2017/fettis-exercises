@@ -1,6 +1,5 @@
-# fettis-exercises
+﻿# fettis-exercises
 Övningarna vi gjorde på fettisdagen
 
 
-
-2018
+http://joakimedwardh.wieg17.se/lyrics/
