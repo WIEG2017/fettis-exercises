@@ -27,8 +27,19 @@ function fibonacci($choosenNum){
             return fibonacci($choosenNum-1) + fibonacci($choosenNum-2);
         }	 
 }
+echo "<br/>";
+/*$array = array();
+for($i = 0; $i <= $choosenNum; $i++) {
+    $array[$i] = fibonacci($i);
+}
+print_r($array);*/
 $a =fibonacci($choosenNum);
-echo "<h3> the answer is : $a </h3>"
+echo "<h3> the answer is : $a </h3>";
+
+
+
+
+
 
 ?>
 </body>
