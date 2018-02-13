@@ -42,10 +42,7 @@
     <?php 
         echo "<div class='wrapper'>
         <h2>".$_SERVER['REMOTE_ADDR']."</h2>
-        </div>"
-        ;
-
-        
+        </div>";
     ?>
 
 
