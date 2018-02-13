@@ -27,7 +27,7 @@ echo "<input type='submit' value='Submit'>";
 echo     "</form>";
 
 
-echo ($_SESSION['name']);
+echo "<div> A couple of seconds ago... someone wrote:" . ($_SESSION['name']) . ' ' . ($_SESSION['lastname']) . "</div>";
 
 ?>
 
