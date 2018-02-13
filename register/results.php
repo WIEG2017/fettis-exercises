@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,8 +26,11 @@
 <body>
 
 <?php
+<<<<<<< HEAD
 ini_set("display_errors", 1);
 session_start();
+=======
+>>>>>>> cbd823ae7ad3bebc750b4849424fb4e3f217910c
 
 if(isset($_POST['name']) or isset($_POST['lastname'])){
   $_SESSION['name'] = $_POST['name'];
@@ -37,7 +43,7 @@ echo "<h1>Welcome ".$name  . '  ' . $lastname.", Enjoy your stay!</h1>";
 echo "<br/>";
 echo '<a href="register.php">back</a>';
 
-
+echo '<br/><a href="sessiondestroy.php"><button>DÖDA</button></a>'
 
 ?>
 

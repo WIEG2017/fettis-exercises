@@ -1,5 +1,8 @@
 <?php 
 session_start();
+if(isset($_SESSION['name'])){
+    header("location:results.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +30,12 @@ echo "<input type='submit' value='Submit'>";
 echo     "</form>";
 
 
+<<<<<<< HEAD
 echo "<div> A couple of seconds ago... someone wrote:" . ($_SESSION['name']) . ' ' . ($_SESSION['lastname']) . "</div>";
+=======
+
+// print_r ($_SESSION['name']);
+>>>>>>> cbd823ae7ad3bebc750b4849424fb4e3f217910c
 
 ?>
 
