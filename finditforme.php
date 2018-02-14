@@ -1,24 +1,31 @@
 <?php
+    $errors = array();
     if(isset($_GET["engine"]) && isset($_GET["query"]))
     {
         $query = urlencode($_GET["query"]);
         
-        if($_GET["query"] == "")
+        if(empty($_GET["query"]))
         {
-            echo "Your query was empty, please try again!";
+            $errors[] = "Your query was empty, please try again!";
+            //echo "Your query was empty, please try again!";
         }
         
-        if($_GET["engine"] == "google")
+        if(empty($_GET["engine"]))
         {
-            header("Location: https://www.google.se/search?q=" . $query);
+            $errors[] = "Some how you didn't choose either of the two search engines... Please don't manually edit the URL!";
+            //echo "Some how you didn't choose either of the two search engines... Please don't manually edit the URL!";
         }
         elseif ($_GET["engine"] == "duckduck")
         {
-            header("Location: https://duckduckgo.com/?q=" . $query);
+            //header("Location: https://duckduckgo.com/?q=" . $query);
+        }
+        elseif ($_GET["engine"] == "google")
+        {
+            //header("Location: https://www.google.se/search?q=" . $query);
         }
         else
         {
-            echo "Some how you didn't choose either of the two search engines... Please don't manually edit the URL!";
+            die("Something went terribly wrong!");
         }
     }
 ?>
@@ -30,6 +37,17 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Find it for me!</title>
     </head>
+    <?php
+        if(!empty($errors))
+        {
+            echo '<div id="errors">';
+            foreach($errors as $error)
+            {
+                echo '<p>' . $error . '</p>';
+            }
+            echo '</div>';
+        }
+    ?>
     <body>
         <form method="GET" action="finditforme.php">
             <select name="engine">
