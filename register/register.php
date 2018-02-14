@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$felkoder = $_SESSION["felkoder"];
 
 if (!$_SESSION["urllastname"] === "/register/results.php"){
     if(empty($_SESSION["forgottname"])){
@@ -26,7 +27,7 @@ if (!$_SESSION["urllastname"] === "/register/results.php"){
             text-align:center;
             background-color:lightgrey;
             width:400px;
-            height:150px;
+            height:180px;
             margin:auto;
             margin-top:80px;
             padding-top:50px;
@@ -47,7 +48,7 @@ if (!$_SESSION["urllastname"] === "/register/results.php"){
         #missinginfo{
             margin:auto;
             margin-top: 20px;
-            width:200px;
+            width:350px;
             color:red;
             font-size:17px;
         }
@@ -55,7 +56,7 @@ if (!$_SESSION["urllastname"] === "/register/results.php"){
 </head>
 <header>
     <h1> Please Write your Name and Lastname 👽 </h1>
-    <h4>And see what happens when you click 'Submit'</h4></heder>
+    <h4>And see what happens when you click 'Submit'</h4>
 </header>
 <body>
     <div id='wrapper'>
@@ -79,19 +80,28 @@ if (!$_SESSION["urllastname"] === "/register/results.php"){
             </div>
             <input id="submit" type="submit" value="PRESS ME">
         </form>
+
+
         <div id="missinginfo">
-                <?php 
-                switch ($_SESSION["forgottname"]) {
+                
+    <?php 
+        if(!empty($felkoder)){
+                    echo "Du glömde fylla i följande: <br/>" ;
+                //  array_push($_SESSION["felkoder"],"test");
+            foreach (($felkoder) as $felkod){
+                    
+                switch ($felkod) {
                     case "förnamn":
-                    echo "Du glömde förnamnet";
+                    echo "förnamn ";
                     break;
                     case "efternamn":
-                    echo "Du glömde efternamnet";
+                        echo " efternamn";
                     default:
-                    echo "";
-                }
-                echo $_SESSION["forgottfirstname"]?>
-                <?php echo $_SESSION["forgottlastname"]?>
+                        echo "";
+                }   
+            }
+        }
+                ?>
         </div>
     </div>
 </body>

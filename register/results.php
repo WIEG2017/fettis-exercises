@@ -1,14 +1,16 @@
 <?php
 session_start();
+$felkoder = array();
 if(empty($_POST['name'])){
-    header("location:register.php");
-    $_SESSION["urllastname"] = $_SERVER['REQUEST_URI'];
-    $_SESSION["forgottname"] = "förnamn";
+    array_push($felkoder,"förnamn");
 }
 if(empty($_POST['lastname'])){
-    header("location:register.php");
+    array_push($felkoder,"efternamn");
+}
+if(!empty($felkoder)){
     $_SESSION["urllastname"] = $_SERVER['REQUEST_URI'];
-    $_SESSION["forgottname"] = "efternamn";
+    $_SESSION["felkoder"] = $felkoder;
+    header("location:register.php");
 }
 if(isset($_POST['name']) or isset($_POST['lastname'])){
     $_SESSION['name'] = $_POST['name'];
