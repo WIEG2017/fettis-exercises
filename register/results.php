@@ -1,10 +1,14 @@
 <?php
 session_start();
-
+if(empty($_POST['name'])){
+    header("location:register.php");
+    $_SESSION["urllastname"] = $_SERVER['REQUEST_URI'];
+    $_SESSION["forgottname"] = "förnamn";
+}
 if(empty($_POST['lastname'])){
     header("location:register.php");
     $_SESSION["urllastname"] = $_SERVER['REQUEST_URI'];
-    $_SESSION["forgottlastname"] = "Du glömde efternamn";
+    $_SESSION["forgottname"] = "efternamn";
 }
 if(isset($_POST['name']) or isset($_POST['lastname'])){
     $_SESSION['name'] = $_POST['name'];

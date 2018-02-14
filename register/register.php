@@ -2,9 +2,7 @@
 session_start();
 
 if (!$_SESSION["urllastname"] === "/register/results.php"){
-    
-
-    if(empty($_SESSION["forgottfirstname"]) or empty($_SESSION["forgottlastname"])){
+    if(empty($_SESSION["forgottname"])){
         if(isset($_SESSION['name'])){
             header("location:results.php");
         }
@@ -82,7 +80,17 @@ if (!$_SESSION["urllastname"] === "/register/results.php"){
             <input id="submit" type="submit" value="PRESS ME">
         </form>
         <div id="missinginfo">
-                <?php echo $_SESSION["forgottfirstname"]?>
+                <?php 
+                switch ($_SESSION["forgottname"]) {
+                    case "förnamn":
+                    echo "Du glömde förnamnet";
+                    break;
+                    case "efternamn":
+                    echo "Du glömde efternamnet";
+                    default:
+                    echo "";
+                }
+                echo $_SESSION["forgottfirstname"]?>
                 <?php echo $_SESSION["forgottlastname"]?>
         </div>
     </div>
