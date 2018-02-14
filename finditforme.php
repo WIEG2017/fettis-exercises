@@ -7,25 +7,25 @@
         if(empty($_GET["query"]))
         {
             $errors[] = "Your query was empty, please try again!";
-            //echo "Your query was empty, please try again!";
-        }
-        
-        if(empty($_GET["engine"]))
-        {
-            $errors[] = "Some how you didn't choose either of the two search engines... Please don't manually edit the URL!";
-            //echo "Some how you didn't choose either of the two search engines... Please don't manually edit the URL!";
-        }
-        elseif ($_GET["engine"] == "duckduck")
-        {
-            //header("Location: https://duckduckgo.com/?q=" . $query);
-        }
-        elseif ($_GET["engine"] == "google")
-        {
-            //header("Location: https://www.google.se/search?q=" . $query);
         }
         else
         {
-            die("Something went terribly wrong!");
+            if(empty($_GET["engine"]))
+            {
+                $errors[] = "Some how you didn't choose either of the two search engines... Please don't manually edit the URL!";
+            }
+            elseif ($_GET["engine"] == "duckduck")
+            {
+                header("Location: https://duckduckgo.com/?q=" . $query);
+            }
+            elseif ($_GET["engine"] == "google")
+            {
+                header("Location: https://www.google.se/search?q=" . $query);
+            }
+            else
+            {
+                $errors[] = "Some how you didn't choose either of the two search engines... Please don't manually edit the URL!";
+            }
         }
     }
 ?>
