@@ -17,11 +17,20 @@
             text-align:center;
             /* color:white; */
         }
-        .wrapper{
+        #wrapper{
             width:350px;
             height:150px;
             margin:auto;
-            margin-top:150px;
+            margin-top:130px;
+            text-align:center;
+            background-color: grey;
+            padding-top:50px;
+            border-radius:50%;
+        }
+        #wrapper2{
+            width:550px;
+            height:150px;
+            margin:auto;
             text-align:center;
             background-color: grey;
             padding-top:50px;
@@ -40,9 +49,14 @@
 </header>
 <body>
     <?php 
-        echo "<div class='wrapper'>
+        echo "<div id='wrapper'>
         <h2>".$_SERVER['REMOTE_ADDR']."</h2>
         </div>";
+        echo "<h1 style='text-align:center;'>Some info about you</h1>
+        <div id='wrapper2'>
+        <h3>".$_SERVER['HTTP_USER_AGENT']."</h3>
+        </div>";
+
     ?>
 
 
