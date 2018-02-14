@@ -63,7 +63,14 @@
         $age = $_POST['age'];
         $month = $_POST['month'];
 
-        echo "<script type='text/javascript'>alert('Namn: $name Ålder: $age Favoritmånad: $month');</script>";
+        //kollar först om variabeln is set, kollar sedan så att variabeln har data i sig med empty. 
+
+        if(isset($name, $age, $month) && !empty($name) && !empty($age) && !empty($month)){
+            echo "<script type='text/javascript'>alert('Namn: $name Ålder: $age Favoritmånad: $month');</script>";
+        }
+        else {
+            echo "<script type='text/javascript'>alert('Fyll i hela formuläret innan du trycker på skicka!');</script>";
+        }
 
  ?>
  </div>
