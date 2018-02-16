@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 ?>
-
+//KAN TESTAT HÄR: http://antonpetersson.wieg17.se/blackjack/
 <!DOCTYPE html>
 <html lang="en">
 <head>
