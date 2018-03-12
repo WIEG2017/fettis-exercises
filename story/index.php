@@ -70,7 +70,7 @@ function verb($verb){
 
 function substantiv($substantiv){
 
-    $substantiv[RAND(0, count($substantiv)-1)];
+    $randSub = $substantiv[RAND(0, count($substantiv)-1)];
 
     return $randSub;
 
@@ -90,11 +90,11 @@ function bonus($bonus){
 function createStory($adjektiv,$substantiv,$verb,$bonus){
    
    
-    if (isset($_POST["name"]) and count($_POST["name"]) > 0) {
+    if (isset($_POST["name"]) && !empty($_POST["name"])) {
         $result = $_POST["name"];
         
     }
-    
+   
     else{
         
         $result = substantiv($substantiv);
