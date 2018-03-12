@@ -1,3 +1,19 @@
-body {
-    font-size: 20vh;
+body{
+    background-color: darkgreen;
+}
+#playerCards{
+    text-align: center;
+    width: 100%;
+}
+#messages{
+    text-align: center;
+    background-color: orange;
+}
+#buttonArea{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+img{
+    border: 2px solid;
 }
